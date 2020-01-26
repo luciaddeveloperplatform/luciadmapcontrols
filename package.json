@@ -4,8 +4,8 @@
   "description": "Set of map controls compatible with LuciadRIA 2020.0 release",
   "main": "index.js",
   "scripts": {
-    "preinstall": "echo PRE && npm i symlink-dir -D",
-    "postinstall": "echo POST && symlink-dir ../@luciad ./node_modules/@luciad"
+    "preinstall": "npm i symlink-dir -D",
+    "postinstall": "symlink-dir ../@luciad ./node_modules/@luciad"
   },
   "keywords": [
     "luciad",
