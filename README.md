@@ -4,14 +4,9 @@
 This is a set of ready to use controls for LuciadRIA 2020 created as part of the LuciadRIA tutorial
 
 ## How to use.  
-Install from Github
-Install them from npm 
+Install the package from Github
 ```
 npm install luciaddevelopmentplatform/luciadmapcontrols --save
-```
-Or Install them from npm 
-```
-npm install luciadmapcontrols --save
 ```
 
 Once installed you only need to import them the ES6 way:
