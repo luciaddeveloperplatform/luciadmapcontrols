@@ -41,20 +41,14 @@ import { createBounds } from "@luciad/ria/shape/ShapeFactory";
 import { ScaleIndicator, ZoomControl, MouseLocationComponent, LayerTreeControl , SimpleBalloonContentProvider} from "luciadmapcontrols";
 import "luciadmapcontrols/styles.css"
 
-import ModelFactory from "./factories/ModelFactory";
-import LayerFactory from "./factories/LayerFactory";
-
-const root = document.getElementById("root");
-
-const mapElement = document.createElement("div");
-mapElement.classList.add("LuciadMap");
-root.appendChild(mapElement);
+...
 
 const map =new WebGLMap(mapElement, {reference: ReferenceProvider.getReference("EPSG:4978")});
 const layerControlElement = document.createElement("div");
 layerControlElement.id =  'layer-control-id';
 mapElement.appendChild(layerControlElement)
 
+...
 
 new ScaleIndicator(map);
 new ZoomControl(map);
@@ -65,9 +59,11 @@ const layerConntroller = new LayerTreeControl(map, {
     domId: "layer-control-id"
 });
 
-map.mapNavigator.fit({bounds: createBounds(ReferenceProvider.getReference("CRS:84"), [-122, 60, 25, 20])});
-const model = ModelFactory.createURLFeatureModel({target: './resources/states.json'});
-const layer =LayerFactory.createFeatureLayer( model, {label: "USA", selectable: true});;
+// Add a layer to test...
+const store = new UrlStore({target: './resources/states.json'});
+const model =  new FeatureModel(store)
+const layer = new FeatureLayer(model, {label: "USA"});
+
+// Assign our Balloon controller  to a layer
 layer.balloonContentProvider = SimpleBalloonContentProvider;
-map.layerTree.addChild(layer);
 ```
