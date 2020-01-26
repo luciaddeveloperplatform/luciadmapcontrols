@@ -34,7 +34,7 @@ Once installed you only need to import them the ES6 way:
 ```
 import "./index.scss";
 
-//  Luciad Map controls NPM library
+// Import Luciad Map controlsfrom this library
 import { ScaleIndicator, ZoomControl, MouseLocationComponent, LayerTreeControl , SimpleBalloonContentProvider} from "luciadmapcontrols";
 import "luciadmapcontrols/styles.css"
 
