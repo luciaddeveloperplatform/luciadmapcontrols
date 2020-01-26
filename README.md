@@ -32,36 +32,23 @@ Once installed you only need to import them the ES6 way:
 
 ## Example:
 ```
-import "./index.scss";
-
+...
 // Import Luciad Map controlsfrom this library
 import { ScaleIndicator, ZoomControl, MouseLocationComponent, LayerTreeControl , SimpleBalloonContentProvider} from "luciadmapcontrols";
-import "luciadmapcontrols/styles.css"
+import "luciadmapcontrols/styles.css";
 
-// LuciadRIA API
-import { WebGLMap } from "@luciad/ria/view/WebGLMap";
-import * as ReferenceProvider from '@luciad/ria/reference/ReferenceProvider';
-import { createBounds } from "@luciad/ria/shape/ShapeFactory";
-import {UrlStore} from "@luciad/ria/model/store/UrlStore";
-import {FeatureModel} from "@luciad/ria/model/feature/FeatureModel";
-import {FeatureLayer} from "@luciad/ria/view/feature/FeatureLayer";
+...
 
-// Create a dom element to hold the map
-const mapElement = document.createElement("div");
-mapElement.classList.add("LuciadMap");
-
-// Add it to root
-const root = document.getElementById("root");
-root.appendChild(mapElement);
-
-// Create a map and got to boounds
-const map =new WebGLMap(mapElement, {reference: ReferenceProvider.getReference("EPSG:4978")});
+// Create a map and fit to bounds
+const map = new WebGLMap(mapElement, {reference: ReferenceProvider.getReference("EPSG:4978")});
 map.mapNavigator.fit({bounds: createBounds(ReferenceProvider.getReference("CRS:84"), [-122, 60, 25, 20])});
 
-// Create an element to hold the layer control
+// Create an html element to hold the layer control
 const layerControlElement = document.createElement("div");
-layerControlElement.id =  'layer-control-id';
-mapElement.appendChild(layerControlElement)
+layerControlElement.id = 'layer-control-id';
+mapElement.appendChild(layerControlElement);
+
+// Create a new LayerTreeControl
 new LayerTreeControl(map, {
     noLayerDelete: true,
     domId: "layer-control-id"
@@ -72,15 +59,15 @@ new ScaleIndicator(map);
 new ZoomControl(map);
 new MouseLocationComponent(map);
 
-// Add a layer to test...
+// Add a feature layer to test...
 const store = new UrlStore({target: './resources/states.json'});
-const model =  new FeatureModel(store)
+const model = new FeatureModel(store)
 const layer = new FeatureLayer(model, {label: "USA", selectable: true});
 
-// Assign our Balloon controller  to a layer
+// Assign our the Balloon controller  to a feature layer
 layer.balloonContentProvider = SimpleBalloonContentProvider;
 
-// Add layer to map
+// Add the feature layer to the map
 map.layerTree.addChild(layer);
 
 ```
