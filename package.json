@@ -12,7 +12,11 @@
     "layercontrol",
     "map"
   ],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luciaddevelopmentplatform/luciadmapcontrols"
+  },
+  "author": "Hegaxon",
   "license": "MIT",
   "peerDependencies": {
     "@luciad/ria": "^2020.0",
