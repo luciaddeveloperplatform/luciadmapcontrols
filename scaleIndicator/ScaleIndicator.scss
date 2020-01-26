@@ -1,0 +1,55 @@
+@import "../template/css/theme/default.scss";
+
+//#snippet scaleindicatorcss
+.scaleIndicator {
+  width: 150px;
+  height: 23px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  z-index: 400;
+}
+//#endsnippet scaleindicatorcss
+
+.scaleIndicatorText {
+  width: 100%;
+  height: 15px;
+  position: relative;
+  bottom: 3px;
+  right: 0;
+  color: $text-color-normal;
+  font-size: .7em;
+  font-weight: inherit;
+  text-shadow: black 1px 1px 0px, black 1px -1px 0px, black -1px 1px 0px, black -1px -1px 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  font-family: inherit;
+  z-index: 400;
+  text-align: center;
+}
+
+/*
+ Do not change positioning parameters (position, top, left,...) and width of foreground and background classes.
+ These are manipulated by ScaleIndicator.js!
+*/
+.scaleIndicatorForeground {
+  background-color: black;
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.scaleIndicatorBackground {
+  width: 100%;
+  height: 6px;
+  position: relative;
+  bottom: 0;
+  right: 0;
+  border: 1px solid black;
+  background-color: white;
+  opacity: 0.8;
+  z-index: 400;
+}

@@ -1,0 +1,45 @@
+@import "../template/css/theme/default.scss";
+
+.contextMenu {
+  min-width: 130px;
+  min-height: 50px;
+  position: absolute;
+  background-color: rgb(23, 28, 34);
+  cursor: default;
+  z-index: 900;
+  @include user-select(none);
+
+  &.contextMenuOpen {
+    display: block;
+  }
+
+  &.contextMenuClosed {
+    display: none;
+  }
+}
+
+.contextMenuItem {
+  color: $text-color-normal;
+  line-height: 50px;
+  vertical-align: top;
+  padding-right: 10px;
+  padding-left: 10px;
+
+  &:hover {
+    background-color: rgb(43, 53, 64);
+  }
+
+  &.separator {
+    height: 1px;
+    background-color: white;
+  }
+
+  & .checkbox {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}

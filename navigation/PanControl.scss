@@ -1,0 +1,107 @@
+@import "../template/css/theme/default.scss";
+
+.panDisplay {
+  position: absolute;
+  z-index: 200;
+  bottom: 15px;
+  left: 40px;
+  width: 54px;
+  height: 54px;
+  background-color: transparent;
+  background-position: 0px 0px;
+  background-size: 100%;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-repeat: no-repeat;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'LuciadRIA' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  & .Pan {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    font-size: 18px;
+
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+
+  & .panUp {
+    top: 0px;
+    left: 18px;
+    color: $text-color-normal;
+    background-size: 18px 18px;
+
+    &:active {
+      color: $brand-primary;
+      top: 1px;
+    }
+
+    &:before {
+      content: "\e903";
+    }
+  }
+
+  & .panDown {
+    top: 36px;
+    left: 18px;
+    color: $text-color-normal;
+    background-size: 18px 18px;
+
+    &:active {
+      color: $brand-primary;
+      top: 37px;
+    }
+
+    &:before {
+      content: "\e905";
+    }
+  }
+
+  & .panLeft {
+    top: 18px;
+    left: 0px;
+    color: $text-color-normal;
+    background-size: 18px 18px;
+
+    &:active {
+      color: $brand-primary;
+      top: 19px;
+    }
+
+    &:before {
+      content: "\e902";
+    }
+  }
+
+  & .panRight {
+    top: 18px;
+    left: 36px;
+    color: $text-color-normal;
+    background-size: 18px 18px;
+
+    &:active {
+      color: $brand-primary;
+      top: 19px;
+    }
+
+    &:before {
+      content: "\e904";
+    }
+  }
+}

@@ -1,0 +1,77 @@
+.panDisplay {
+  position: absolute;
+  z-index: 200;
+  bottom: 15px;
+  left: 40px;
+  width: 54px;
+  height: 54px;
+  background-color: transparent;
+  background-position: 0px 0px;
+  background-size: 100%;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-repeat: no-repeat;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'LuciadRIA' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  .panDisplay .Pan {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    font-size: 18px; }
+    .panDisplay .Pan:hover {
+      color: #c1d92a; }
+  .panDisplay .panUp {
+    top: 0px;
+    left: 18px;
+    color: #FFFFFF;
+    background-size: 18px 18px; }
+    .panDisplay .panUp:active {
+      color: #c1d92a;
+      top: 1px; }
+    .panDisplay .panUp:before {
+      content: "\e903"; }
+  .panDisplay .panDown {
+    top: 36px;
+    left: 18px;
+    color: #FFFFFF;
+    background-size: 18px 18px; }
+    .panDisplay .panDown:active {
+      color: #c1d92a;
+      top: 37px; }
+    .panDisplay .panDown:before {
+      content: "\e905"; }
+  .panDisplay .panLeft {
+    top: 18px;
+    left: 0px;
+    color: #FFFFFF;
+    background-size: 18px 18px; }
+    .panDisplay .panLeft:active {
+      color: #c1d92a;
+      top: 19px; }
+    .panDisplay .panLeft:before {
+      content: "\e902"; }
+  .panDisplay .panRight {
+    top: 18px;
+    left: 36px;
+    color: #FFFFFF;
+    background-size: 18px 18px; }
+    .panDisplay .panRight:active {
+      color: #c1d92a;
+      top: 19px; }
+    .panDisplay .panRight:before {
+      content: "\e904"; }
+
+/*# sourceMappingURL=PanControl.css.map */

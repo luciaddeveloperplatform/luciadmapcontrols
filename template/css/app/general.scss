@@ -1,0 +1,359 @@
+@import "../theme/default.scss";
+
+input:focus,
+.form-control:focus,
+.twitter-typeahead
+.form-control:focus {
+  border-color: $brand-primary !important;
+  background: lighten($input-bg, 5%) !important;
+  outline: 0;
+  @include box-shadow(none);
+}
+
+button.active
+button:active,
+.btn-default:active,
+.btn-default.active,
+.btn-default:focus:active,
+.btn-default.active:focus {
+  background-color: $brand-primary !important;
+  color: $btn-primary-color !important;
+  border-color: $btn-default-bg !important;
+  outline: 0;
+  @include box-shadow(none);
+}
+
+progress {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 150px;
+  height: 12px;
+  background-color: #808080;
+  color: $brand-primary;
+  border: 1px solid $brand-primary;
+
+  &::-moz-progress-bar {
+    background: $brand-primary;
+  }
+
+  &::-webkit-progress-value {
+    background: $brand-primary;
+  }
+}
+
+.spin {
+  -webkit-animation: spin 2s infinite linear;
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(359deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@-o-keyframes spin {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(359deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+.form-inline input[type=range].form-control {
+  width: 150px;
+}
+
+input[type="checkbox"].form-control, input[type="radio"].form-control {
+  width: auto;
+  height: auto;
+}
+
+/* Bootstrap changes the behavior of form elements for mobile.
+ * These changes don't make sense in our context, so they're reverted here.
+ */
+
+.form-inline {
+  & .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+
+  & .radio, & .checkbox {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+}
+
+#messageoverlay {
+  position: fixed;
+  z-index: 5000;
+  top: 0;
+  left: 0;
+  vertical-align: middle;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 1);
+  display: table;
+  opacity: 0;
+  visibility: hidden;
+
+  & h3 {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .samplenotallowed & {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.btn[disabled] {
+  pointer-events: all !important;
+  color: #888;
+}
+
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+label {
+  text-transform: uppercase;
+}
+
+code {
+  background-color: transparent;
+}
+
+#map {
+  background-color: #181818;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 0;
+  margin: 0 0;
+}
+
+#onmap {
+  z-index: 200;
+}
+
+.noselect {
+  @include user-select(none);
+}
+
+#topleftbuttons {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 1000;
+  background-color: transparent;
+  border: 0;
+}
+
+.btn-map, .controlCollapseAction {
+  background: transparent !important;
+  border: 0;
+  font-size: 1.75em;
+  padding: 2px 4px;
+
+  &:hover,
+  &:active,
+  &.active,
+  &:focus:active,
+  &.active:focus {
+    color: $brand-primary !important;
+    background: transparent !important;
+  }
+}
+
+.info-button .glyphicon:before {
+  content: "\e086";
+}
+
+.fullscreen-button .glyphicon:before {
+  content: "\e140";
+}
+
+.fullscreen-button.active .glyphicon:before {
+  content: "\e097";
+}
+
+#infopanel {
+  min-width: 300px;
+  width: 30%;
+  height: 100%;
+  position: absolute;
+  z-index: 800;
+  top: 0px;
+  left: 0px;
+  padding: 0 10px 10px 10px;
+  background-color: $infopanel-bg;
+  font-size: 12px;
+  opacity: 0;
+  visibility: hidden;
+  @include transition(opacity 600ms, visibility 600ms);
+}
+
+.infopanel-active #infopanel {
+  visibility: visible;
+  opacity: 1;
+}
+
+#infopanel-content {
+  margin-top: 35px; /*info button = 10px from top + 25px high */
+  overflow: auto;
+  height: calc(100% - 35px);
+}
+
+#right {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  width: 50%;
+}
+
+#after {
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 5px 10px 5px 10px;
+}
+
+.topcenter {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  margin-right: -50%;
+  z-index: 99999;
+  @include translate(-50%, 0%);
+}
+
+.bottomcenter {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin-right: -50%;
+  z-index: 90;
+  @include translate(-50%, 0%);
+}
+
+::-ms-expand {
+  color: $text-color-normal;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.48);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(205, 201, 201, 0.8);
+  border-radius: 10px;
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.64);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(238, 233, 233, 0.4);
+}
+
+.toasts {
+  width: 60%;
+}
+
+.toast {
+  text-align: start;
+  padding: 1em;
+  margin-top: 2em;
+  z-index: 1000;
+  font-size: larger;
+  font-weight: bold;
+  background-color: rgba(50, 50, 50, 0.7);
+  color: $text-color-normal;
+  @include transition(opacity 300ms ease-in);
+}
+
+.toast.error {
+  border: 1px solid #d40a00;
+}
+
+.toast.warning {
+  border: 1px solid #ffb000;
+}
+
+button {
+  margin: 2px;
+}
+
+/* pre and code */
+pre, code {
+  color: $brand-primary;
+  border: 0px solid #ccc;
+  padding: 0px 0px
+}
+
+pre {
+  border-width: 0px 0;
+  padding: 1.5em;
+}
+
+.glyphicon, .lcdIcon {
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+@media (max-width: 599px) {
+
+  #infopanel {
+    width: 100%;
+  }
+}
+
+@media (max-width: 599px) {
+
+  #infopanel {
+    width: 100%;
+  }
+}

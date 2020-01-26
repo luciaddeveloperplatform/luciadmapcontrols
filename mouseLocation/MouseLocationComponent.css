@@ -1,0 +1,28 @@
+.mouseLocation {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: auto;
+  font-weight: bold;
+  font-size: 1.175em;
+  cursor: default;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000;
+  z-index: 200;
+  background-color: transparent;
+  pointer-events: none; }
+  .mouseLocation .coordinates {
+    width: 12em;
+    display: inline-block;
+    text-align: right; }
+  .mouseLocation .height {
+    width: 4.1em;
+    display: inline-block;
+    text-align: right; }
+
+/*# sourceMappingURL=MouseLocationComponent.css.map */

@@ -1,0 +1,25 @@
+.controlGroup {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  color: #FFFFFF;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  max-height: 100%;
+  min-width: 200px;
+  width: 320px;
+  box-sizing: content-box;
+  z-index: 500;
+  cursor: default;
+  overflow: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: calc(100% - 60px);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .controlGroup .control {
+    position: static; }
+
+/*# sourceMappingURL=ControlGroup.css.map */

@@ -1,0 +1,24 @@
+{
+  "name": "luciadmapcontrols",
+  "version": "1.0.0",
+  "description": "Set of map controls compatible with LuciadRIA 2020.0 release",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "echo PRE && npm i symlink-dir -D",
+    "postinstall": "echo POST && symlink-dir ../@luciad ./node_modules/@luciad"
+  },
+  "keywords": [
+    "luciad",
+    "layercontrol",
+    "map"
+  ],
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "@luciad/ria": "^2020.0",
+    "bootstrap-sass": ">= 3.4.1"
+  },
+  "devDependencies": {
+    "symlink-dir": "^3.1.1"
+  }
+}

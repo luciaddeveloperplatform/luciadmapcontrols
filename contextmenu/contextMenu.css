@@ -1,0 +1,36 @@
+.contextMenu {
+  min-width: 130px;
+  min-height: 50px;
+  position: absolute;
+  background-color: #171c22;
+  cursor: default;
+  z-index: 900;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .contextMenu.contextMenuOpen {
+    display: block; }
+  .contextMenu.contextMenuClosed {
+    display: none; }
+
+.contextMenuItem {
+  color: #FFFFFF;
+  line-height: 50px;
+  vertical-align: top;
+  padding-right: 10px;
+  padding-left: 10px; }
+  .contextMenuItem:hover {
+    background-color: #2b3540; }
+  .contextMenuItem.separator {
+    height: 1px;
+    background-color: white; }
+  .contextMenuItem .checkbox {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    margin-top: auto;
+    margin-bottom: auto; }
+
+/*# sourceMappingURL=contextMenu.css.map */

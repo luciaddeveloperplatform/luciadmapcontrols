@@ -1,0 +1,21 @@
+.attribution {
+  position: absolute;
+  bottom: 50px;
+  right: 10px;
+  z-index: 1;
+  pointer-events: none;
+  text-align: right; }
+
+#attribution-data {
+  font-size: 1.2em; }
+
+.attribution-string {
+  color: #FFFFFF;
+  font-size: 80%;
+  font-family: sans-serif;
+  text-shadow: 0 0 2px #333,0 0 2px #333,0 0 1px #333;
+  margin-left: 5px;
+  margin-top: 0;
+  margin-bottom: 0; }
+
+/*# sourceMappingURL=AttributionComponent.css.map */
