@@ -2,16 +2,20 @@
  
 ## Description 
 This is a set of ready to use controls for LuciadRIA 2020 created as part of the LuciadRIA tutorial. 
-You will require a copy of LuciadRIA2020.x installed in your main project to use this library. 
+https://dev.luciad.com
+
+You will require a copy of LuciadRIA2020.x installed as a dependency in your project. 
+
+LuciadRIA is commercial software developed by Hexagon. To use LuciadRIA you will need to acquire a copy of LuciadRIA from your local distributor. For more information on how to acquire a copy of LuciadRIA refer to https://www.hexagongeospatial.com/
 
 ## How to use.  
 * 1 Create a project. 
 * 2 Make sure you LuciadRIA2020.x (or above) is already installed 
 * 3 Install luciadmapcontrols from npm or from github
 
-Install the package from npm (this is the latest stable version)
+Install from github (You can replace master for an specific version)
 ```
-npm install luciadmapcontrols --save
+npm install https://github.com/luciaddevelopmentplatform/luciadmapcontrols/tarball/master
 ```
 
 * 4 Once installed you only need to import the modules the ES6 way:
