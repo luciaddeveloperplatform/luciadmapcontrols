@@ -46,7 +46,7 @@ IMPORTANT:  Don'r forget to import the CSS.
 Example 1: Basic controls
 ```
 ...
-// Import Luciad Map controlsfrom this library
+// Import the Luciad Map Controls from the luciadmapcontrols package
 import { ScaleIndicator, ZoomControl, MouseLocationComponent, LayerTreeControl } from "luciadmapcontrols";
 import "luciadmapcontrols/styles.css";
 
@@ -76,7 +76,7 @@ new MouseLocationComponent(map);
 Example 2: A balloon controller
 
 ```
-// Import Luciad Map controlsfrom this library
+// Import the Luciad Map Controls from the luciadmapcontrols package
 import { SimpleBalloonContentProvider } from "luciadmapcontrols";
 import "luciadmapcontrols/styles.css";
 
