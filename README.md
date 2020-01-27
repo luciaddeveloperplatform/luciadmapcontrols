@@ -1,14 +1,24 @@
 # Luciad Map controls
  
 ## Description 
-This is a set of ready to use controls for LuciadRIA 2020 created as part of the LuciadRIA tutorial
+This is a set of ready to use controls for LuciadRIA 2020 created as part of the LuciadRIA tutorial. 
+You will require a copy of LuciadRIA2020.x installed in your main project to use this library. 
 
 ## How to use.  
-Install the package from Github
+* 1) Create a project. 
+* 2) Make sure you LuciadRIA2020.x (or above) is already installed 
+* 3) Install luciadmapcontrols from npm or from github
+
+Install the package from npm (this is the latest stable version)
+```
+npm install luciadmapcontrols --save
+```
+
+Install the package from Github (this is a development version)
 ```
 npm install luciaddevelopmentplatform/luciadmapcontrols --save
 ```
-
+* 4)
 Once installed you only need to import them the ES6 way:
 ```
     import { ScaleIndicator, ZoomControl, MouseLocationComponent, LayerTreeControl } from "luciadmapcontrols";
