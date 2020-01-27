@@ -1,24 +1,26 @@
 # Luciad Map controls
  
 ## Description 
-This is a set of ready to use controls for LuciadRIA 2020 created as part of the LuciadRIA tutorial. 
+This is a package of ready to use web controls for LuciadRIA 2020 created as part of the LuciadRIA tutorial. 
 https://dev.luciad.com
 
-You will require a copy of LuciadRIA2020.x installed as a dependency in your project. 
+To use this package you require a copy of LuciadRIA2020.x previously installed as a dependency in your npm project.
 
-LuciadRIA is commercial software developed by Hexagon. To use LuciadRIA you will need to acquire a copy of LuciadRIA from your local distributor. For more information on how to acquire a copy of LuciadRIA refer to https://www.hexagongeospatial.com/
+LuciadRIA is commercial software developed by Hexagon. To use LuciadRIA you will need to acquire a copy of LuciadRIA from your local distributor. 
+For more information on how to acquire a copy of LuciadRIA refer to https://www.hexagongeospatial.com/
 
 ## How to use.  
-* 1 Create a project. 
-* 2 Make sure you LuciadRIA2020.x (or above) is already installed 
-* 3 Install luciadmapcontrols from npm or from github
+* 1 Create a new project or reuse an existing one. 
+* 2 Make sure the LuciadRIA2020.x(or above) is already installed in your project
+* 3 Now Install luciadmapcontrols with npm from github
 
-Install from github (You can replace master for an specific version)
+IMPORTANT: Use that tarball from github (you can replace master ro request an specific version)
 ```
 npm install https://github.com/luciaddevelopmentplatform/luciadmapcontrols/tarball/master
 ```
 
-* 4 Once installed you only need to import the modules the ES6 way:
+* 4 Once luciadmapcontrols is installed you can import the modules the ES6 way:
+IMPORTANT:  Don'r forget to import the CSS.
 ```
     import { ScaleIndicator, ZoomControl, MouseLocationComponent, LayerTreeControl } from "luciadmapcontrols";
     import "luciadmapcontrols/styles.css"
@@ -39,11 +41,12 @@ npm install https://github.com/luciaddevelopmentplatform/luciadmapcontrols/tarba
  * AttributionComponent
 
 
-## Example:
+## Examples:
+Example 1: Basic controls
 ```
 ...
 // Import Luciad Map controlsfrom this library
-import { ScaleIndicator, ZoomControl, MouseLocationComponent, LayerTreeControl , SimpleBalloonContentProvider} from "luciadmapcontrols";
+import { ScaleIndicator, ZoomControl, MouseLocationComponent, LayerTreeControl } from "luciadmapcontrols";
 import "luciadmapcontrols/styles.css";
 
 ...
@@ -67,6 +70,14 @@ new LayerTreeControl(map, {
 new ScaleIndicator(map);
 new ZoomControl(map);
 new MouseLocationComponent(map);
+
+```
+Example 2: A balloon controller
+
+```
+// Import Luciad Map controlsfrom this library
+import { SimpleBalloonContentProvider } from "luciadmapcontrols";
+import "luciadmapcontrols/styles.css";
 
 // Add a feature layer to test...
 const store = new UrlStore({target: './resources/states.json'});
