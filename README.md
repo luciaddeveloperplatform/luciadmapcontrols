@@ -10,16 +10,17 @@ LuciadRIA is commercial software developed by Hexagon. To use LuciadRIA you will
 For more information on how to acquire a copy of LuciadRIA refer to https://www.hexagongeospatial.com/
 
 ## How to use.  
-* 1 Create a new project or reuse an existing one. 
-* 2 Make sure the LuciadRIA2020.x(or above) is already installed in your project
-* 3 Now Install luciadmapcontrols with npm from github
+- 1 Create a new project or reuse an existing one. 
+- 2 Make sure the LuciadRIA2020.x(or above) is already installed in your project
+- 3 Now Install luciadmapcontrols with npm from github
 
 IMPORTANT: Use that tarball from github (you can replace master ro request an specific version)
 ```
 npm install https://github.com/luciaddevelopmentplatform/luciadmapcontrols/tarball/master
 ```
 
-* 4 Once luciadmapcontrols is installed you can import the modules the ES6 way:
+* 4 Once luciadmapcontrols is installed you can import the modules the ES6 way:  
+
 IMPORTANT:  Don'r forget to import the CSS.
 ```
     import { ScaleIndicator, ZoomControl, MouseLocationComponent, LayerTreeControl } from "luciadmapcontrols";
