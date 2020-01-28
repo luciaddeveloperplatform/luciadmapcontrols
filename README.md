@@ -12,9 +12,9 @@ For more information on how to acquire a copy of LuciadRIA refer to https://www.
 ## How to use.  
 - 1 Create a new project or reuse an existing one. 
 - 2 Make sure the LuciadRIA2020.x(or above) is already installed in your project
-- 3 Now Install luciadmapcontrols with npm from github
+- 3 Then Install luciadmapcontrols with npm from github link below
 
-IMPORTANT: Use that tarball from github (you can replace master ro request an specific version)
+IMPORTANT: Use the 'tarball' link below (you can replace /master to request a specific version)
 ```
 npm install https://github.com/luciaddeveloperplatform/luciadmapcontrols/tarball/master
 ```
