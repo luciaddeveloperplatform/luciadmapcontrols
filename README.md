@@ -47,7 +47,7 @@ Example 1: Basic controls
 ```
 ...
 // Import the Luciad Map Controls from the luciadmapcontrols package
-import { ScaleIndicator, ZoomControl, MouseLocationComponent, LayerTreeControl } from "luciadmapcontrols";
+import { ScaleIndicator, ZoomControl, MouseLocationComponent } from "luciadmapcontrols";
 import "luciadmapcontrols/styles.css";
 
 ...
@@ -56,7 +56,25 @@ import "luciadmapcontrols/styles.css";
 const map = new WebGLMap(mapElement, {reference: ReferenceProvider.getReference("EPSG:4978")});
 map.mapNavigator.fit({bounds: createBounds(ReferenceProvider.getReference("CRS:84"), [-122, 60, 25, 20])});
 
-// Create an html element to hold the layer control
+// Add other map controls when needed
+new ScaleIndicator(map);
+new ZoomControl(map);
+new MouseLocationComponent(map);
+
+```
+Example 2: A layer control
+```
+...
+// Import the Luciad Map Controls from the luciadmapcontrols package
+import { LayerTreeControl } from "luciadmapcontrols";
+import "luciadmapcontrols/styles.css";
+...
+
+// Create a map and fit to bounds
+const map = new WebGLMap(mapElement, {reference: ReferenceProvider.getReference("EPSG:4978")});
+map.mapNavigator.fit({bounds: createBounds(ReferenceProvider.getReference("CRS:84"), [-122, 60, 25, 20])});
+
+// Insert a html element to hold the layer control
 const layerControlElement = document.createElement("div");
 layerControlElement.id = 'layer-control-id';
 mapElement.appendChild(layerControlElement);
@@ -67,13 +85,8 @@ new LayerTreeControl(map, {
     domId: "layer-control-id"
 });
 
-// Add other map controls when needed
-new ScaleIndicator(map);
-new ZoomControl(map);
-new MouseLocationComponent(map);
-
 ```
-Example 2: A balloon controller
+Example 3: A balloon controller
 
 ```
 // Import the Luciad Map Controls from the luciadmapcontrols package
