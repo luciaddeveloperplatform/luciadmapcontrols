@@ -85,7 +85,7 @@ const store = new UrlStore({target: './resources/states.json'});
 const model = new FeatureModel(store)
 const layer = new FeatureLayer(model, {label: "USA", selectable: true});
 
-// Assign our the Balloon controller  to a feature layer
+// Assign the Balloon controller  to a feature layer
 layer.balloonContentProvider = SimpleBalloonContentProvider;
 
 // Add the feature layer to the map
