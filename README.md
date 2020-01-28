@@ -62,7 +62,7 @@ new ZoomControl(map);
 new MouseLocationComponent(map);
 
 ```
-Example 2: A layer control
+Example 2: Adding a layer control
 ```
 ...
 // Import the Luciad Map Controls from the luciadmapcontrols package
