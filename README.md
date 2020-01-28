@@ -16,7 +16,7 @@ For more information on how to acquire a copy of LuciadRIA refer to https://www.
 
 IMPORTANT: Use that tarball from github (you can replace master ro request an specific version)
 ```
-npm install https://github.com/luciaddevelopmentplatform/luciadmapcontrols/tarball/master
+npm install https://github.com/luciaddeveloperplatform/luciadmapcontrols/tarball/master
 ```
 
 * 4 Once luciadmapcontrols is installed you can import the modules the ES6 way:  
