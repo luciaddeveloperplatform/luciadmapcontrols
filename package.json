@@ -4,9 +4,9 @@
   "description": "Set of map controls compatible with LuciadRIA 2020.0 release",
   "main": "index.js",
   "scripts": {
-    "preinstall": "npm i symlink-dir -D && npm i mkdirp -D && npm i del-symlinks-cli -D",
+    "preinstall": "npm i symlink-dir -D && npm i mkdirp -D && npm i del-symlinks-cli -D && npm i del-cli -D",
     "postinstall": "mkdirp ./node_modules/@luciad && symlink-dir ../@luciad/ria ./node_modules/@luciad/ria",
-    "preuninstall": "del-symlinks ./node_modules/@luciad/ria"
+    "preuninstall": "del-symlinks ./node_modules/@luciad/ria && del-cli ./node_modules/@luciad"
   },
   "keywords": [
     "luciad",
