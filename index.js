@@ -8,5 +8,6 @@ export { ControlGroup } from "./control/ControlGroup";
 export { Control } from "./control/Control";
 export { TooltipHoverController } from "./tooltip/TooltipHoverController";
 export { ContextMenu } from "./contextmenu/ContextMenu";
+export { ContextMenuManager } from "./contextmenu/ContextMenuManager";
 export { SampleContextMenu } from "./contextmenu/SampleContextMenu";
 export { AttributionComponent } from "./attribution/AttributionComponent";
