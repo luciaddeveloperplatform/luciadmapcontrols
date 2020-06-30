@@ -5,7 +5,7 @@ function ContextMenuManager() {
   this._contextMenuMap = {};
   document.body.addEventListener("click", function(event) {
     self.hideAll();
-    event.stopPropagation();
+    // event.stopPropagation();
   }, false);
 }
 
