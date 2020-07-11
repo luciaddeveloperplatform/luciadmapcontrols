@@ -231,7 +231,7 @@
   position: absolute;
   display: none;
   right: 0;
-  z-index: 800; }
+}
 
 @media (max-width: 599px) {
   .controlGroup {
