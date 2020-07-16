@@ -258,7 +258,8 @@
     right: 0;
     height: 100%;
     margin: 0;
-    z-index: 8000; }
+  /*  z-index: 8000; */
+  }
   .infopanel-active .control {
     z-index: -1; }
   .controlClosed {
